@@ -1,0 +1,28 @@
+/*Estilos del footer*/
+footer{
+    width: 100%;
+    background-color: var(--color2);
+    display: flex;
+}
+footer > div{
+    flex: 50%;
+    padding: 2% 5%;
+    text-align: center;
+}
+footer > div > p{
+    font: 1.5rem var(--title);
+    color: white;
+}
+footer > div > a{
+    display: block;
+    font: 1.5rem var(--title);
+    text-decoration: none;
+    color: white;
+    padding: 2%;
+}
+footer > div > a > i{
+    font-size: 2.5rem;
+}
+footer > div > a:hover{
+    text-decoration: underline white;
+}

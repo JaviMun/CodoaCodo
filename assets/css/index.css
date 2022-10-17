@@ -1,0 +1,32 @@
+@import './header.css';
+@import './inicio.css';
+@import './nosotros.css';
+@import './portfolio.css';
+@import './servicios.css';
+@import './contacto.css';
+@import './footer.css';
+
+/*estilos generales y variables*/
+:root{
+    --color1: #010d23;
+    --color2: #03223f;
+    --color3: #038bbb;
+    --color4: #fccb6f;
+    --color5: #e19f41;
+    --title: 'Slabo 27px', serif;
+    --text: 'Roboto', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: var(--title);
+}
+
+p, span, a{
+    font-family: var(--text);
+}

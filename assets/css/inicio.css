@@ -1,0 +1,149 @@
+/*Estilos del inicio de la página*/
+
+section{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 2% 5%;
+}
+
+section:nth-child(even){
+    background-color: var(--color4);
+}
+
+section:nth-child(odd){
+    background-color: var(--color5);
+}
+
+/*Estilos header del inicio*/
+
+#inicio_header{
+    background-color: var(--color3);
+    width: 100%;
+}
+
+#inicio_header > div{
+    flex: 50%;
+    font-size: 2rem;
+}
+
+#inicio_header > div > img {
+    max-width: 700px;
+    width: 80%;
+}
+#inicio_header > div:has(img){
+    text-align: center;
+}
+
+/*Estilo sección frases*/
+.inicio_frases{
+    display: block;
+}
+.inicio_frases > h3{
+    font-size: 1.5rem;
+    margin: 2% 0;
+}
+.inicio_frases > h3:nth-child(2){
+    padding-left: 5%;
+}
+.inicio_frases > h3:nth-child(3){
+    padding-left: 10%;
+}
+
+
+/*Estilo sección portfolio*/
+.inicio_portfolio{
+    justify-content: center;
+}
+.inicio_portfolio > h2{
+    flex: 100%;
+    text-align: center;
+    font-size: 2.5rem;
+}
+.inicio_portfolio > div{
+    flex: 33%;
+    text-align: center;
+}
+.inicio_portfolio > div > img {
+    width: 60%;
+    max-width: 400px;
+}
+.inicio_portfolio > div > h3{
+    font-size: 1.8rem;
+}
+.prueba{
+    height: 350px;
+    width: 100%;
+}
+
+.inicio_servicios > div{
+    flex: 30%;
+    padding: 2%;
+    margin: 0 5px;
+    color: black;
+    border: solid black 2px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.inicio_image{
+    height: 70%;
+    max-width: 300px;
+}
+
+section > div > h3{
+    font-family: var(--title);
+}
+
+section > div > p{
+    font-family: var(--text);
+}
+
+.inicio_button{
+    padding: 1rem 1.8rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: transparent;
+    color: black;
+    border-radius: 2rem;
+    margin: 1rem auto;
+    border: solid black 1.5px;
+}
+.inicio_button:hover{
+    transform: translateY(-0.4rem);
+    transition: .5s;
+    box-shadow: 0px .3rem black;
+}
+.inicio_button{
+    box-shadow: none;
+    transform: translateY(0.4rem);
+    transition: .5s;
+}
+
+.inicio_button > a{
+    background-color: transparent;
+    text-decoration: none;
+    color: black;
+}
+@media (max-width: 720px) {
+    #inicio_header{
+        background-image: url("../img/construyendo-webs.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position:right;
+        padding: 0%;
+    }
+    #inicio_header > div{
+        flex: 100%;
+        background-color: #038abb6b;
+        padding: 5%;
+    }
+
+    #inicio_header > div:nth-child(2){
+        display: none;
+    }
+    .inicio_servicios > div{
+        flex: 100%;
+        border: none;
+    }
+}

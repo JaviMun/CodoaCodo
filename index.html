@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&family=Slabo+27px&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4b36ac4034.js" crossorigin="anonymous"></script>
+    <title>Construyendo Webs</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <div id="escritorio">
+                <a href="nosotros.html">Nosotros</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+            <div id="mobile">
+                <button onclick="mostrarNavMobile()"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </nav>
+        <div id="desplegable" class="mostrar_desplegable">
+            <a href="index.html">Home</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contacto.html">Contacto</a>
+        </div>
+    </header>
+    <main>
+        <section id="inicio_header">
+            <div>
+                <h1>Título</h1>
+                <h2>Subtítulo</h2>
+                <p>parrafo descriptivo de lo necesario que somos para los mortales</p>
+                <button class="inicio_button"><a href="contacto.html">Saber más</a></button>
+            </div>
+            <div>
+                <img src="./assets/img/construyendo-webs.png" alt="foteto">
+            </div>
+        </section>
+        <section class="inicio_frases">
+            <h3>Existe tal relación entre el mundo digital y el real, que parece que uno quita al otro</h3>
+            <h3>Por lo que una buena prescencia en línea es tanto o más importante para tu marca que su reputación</h3>
+            <h3>Por día en el mundo se realizan alrededor de 15 millones de busquedas de productos por hora, 
+                captar un infímo porcentaje de esas busquedas puede asegurar el éxito de tu emprendimiento</h3>
+        </section>
+        <section class="inicio_portfolio">
+            <h2>Aquí portfolio</h2>
+            <div>
+                <img src="./assets/img/back-end.png" alt="imagen" class="inicio_image">
+                <h3>Portfolio 1</h3>
+            </div>
+            <div>
+                <img src="./assets/img/back-end.png" alt="imagen" class="inicio_image">
+                <h3>Portfolio 2</h3>
+            </div>
+            <div>
+                <img src="./assets/img/back-end.png" alt="imagen" class="inicio_image">
+                <h3>Portfolio 3</h3>
+            </div>
+            <button class="inicio_button"><a href="portfolio.html">Ver más</a></button> 
+        </section>
+        <section class="inicio_servicios">
+            <div>
+                <img src="./assets/img/front-end.png" alt="imagen" class="inicio_image">
+                <h3>Front-end</h3>
+                    <p>Sitio web estático que muestre lo mejor de tu empresa</p>
+            </div>
+            <div>
+                <img src="./assets/img/back-end.png" alt="imagen" class="inicio_image">
+                <h3>Back-end</h3>
+                <p>Sitio web autoadministrable con capacidad de manejo de datos</p>
+            </div>
+            <div>
+                <img src="./assets/img/seo.png" alt="imagen" class="inicio_image">
+                <h3>SEO</h3>
+                <p>Qué quiénes te busquen y no lo sepan logren encontrarte</p>
+            </div>
+
+            <button class="inicio_button"><a href="servicios.html">Saber más</a></button> 
+
+        </section>
+        <!--
+            <section class="prueba">
+                <h3>Aquí iría el nosotros</h3>
+            </section>
+
+        -->
+    </main>
+    <footer>
+        <div>
+            <p>Contacto</p>
+            <a href="mailto:javierhmunizaga@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            <a href="tel:5492392562603"><i class="fa-solid fa-phone"></i></a>
+            <a href="https://wa.me/5492392562603?text=Queria%20realizar%20la%20siguiente%20consulta%20"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contacto.html">Contacto</a>
+        </div>
+    </footer>
+    <script src="./assets/js/index.js"></script>
+</body>
+</html>
