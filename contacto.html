@@ -54,7 +54,7 @@
         <form action="#" method="post">
             <div>
                 <label for="name">Nombre</label>
-                <input type="text" id="name" name="name" pattern="[A-Za-z\s]{1,30}" required>
+                <input type="text" id="name" name="name" pattern="[A-Za-z]\s{7,30}" required>
             </div>
             <div>
                 <label for="email">Email</label>
@@ -73,7 +73,7 @@
             </div>
             <div>
                 <label for="consulta">Consulta</label>
-                <textarea id="consulta" name="consulta" rows="4" cols="50" placeholder="Su consulta no molesta :)" minlength="30" required></textarea>
+                <textarea id="consulta" name="consulta" rows="4" cols="50" placeholder="Su consulta no molesta :)" minlength="20" required></textarea>
             </div>
             <input type="submit" value="Enviar">
         </form>
