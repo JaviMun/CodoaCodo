@@ -5,23 +5,21 @@ const CONSULTA = document.getElementById('consulta');
 const FORM = document.querySelector('form');
 
 function validarNombre() {
-    let regExpNombre = new RegExp("[A-Za-z\s]");
+    let regExpNombre = new RegExp("[A-Za-z]\s");
     if (regExpNombre.test(NOMBRE.value) && NOMBRE.value.length >= 5) {
         return true;
     } else {
         return false;
     }
 }
-NOMBRE.addEventListener('keyup', validarNombre);
+
 function validarEmail(){
-    /*let regExpEmail = new RegExp("[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$");
+    let regExpEmail = new RegExp("[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$");
     if(regExpEmail.test(EMAIL.value)){
-        console.log(true);
         return true;
     }else{
-        console.log(true);
         return false;
-    }*/
+    }
     /*API PARA LA VALIDACIÓN DE DIRECCIONES DE EMAIL
     var myHeaders = new Headers();
     myHeaders.append("apikey", "QwImUtMQjTDsYbAnznSCcphpuasVY0YT");
@@ -38,17 +36,44 @@ function validarEmail(){
         .catch(error => console.log('error', error));
     */
 }
-
+function validarConsulta(){
+    if(CONSULTA.value.length >= 20){
+        return true;
+    }else{
+        return false;
+    }
+}
 function enviarDatos(e){
-    e.preventDefault()
+    e.preventDefault();
     let form = {
-        name: NOMBRE.value,
-        email: EMAIL.value,
-        servicio: SERVICIO.value,
-        consulta: CONSULTA.value
+        message: "algo salio mal!"
+    }
+    if(validarNombre()){
+        console.log("el nombre esta bien, como el nene");
+        if(validarEmail()){
+            console.log("el email esta bien, como el nene");
+            if(validarConsulta()){
+                console.log("la consulta esta bien, como el nene");
+                form = {
+                    name: NOMBRE.value,
+                    email: EMAIL.value,
+                    servicio: SERVICIO.value,
+                    consulta: CONSULTA.value
+                }
+            }else{
+                console.log("la consulta no esta bien");
+                CONSULTA.focus();
+            }
+        }else{
+            console.log("el email no esta bien");
+            EMAIL.focus();
+        }
+    }else{
+        console.log("el nombre no esta bien");
+        NOMBRE.focus();
     }
     console.table(form);
-    FORM.reset();
+    //FORM.reset();
 }
 
 FORM.addEventListener('submit', enviarDatos);

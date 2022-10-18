@@ -72,10 +72,7 @@ section:nth-child(odd){
 .inicio_portfolio > div > h3{
     font-size: 1.8rem;
 }
-.prueba{
-    height: 350px;
-    width: 100%;
-}
+
 .inicio_servicios > h2 {
     flex: 100%;
     text-align: center;
@@ -131,6 +128,14 @@ section > div > p{
     text-decoration: none;
     color: black;
 }
+@media(max-width: 1250px){
+    .inicio_servicios > div{
+        flex: 100%;
+        border: none;
+    }
+}
+
+
 @media (max-width: 720px) {
     #inicio_header{
         background-image: url("../img/construyendo-webs.png");
