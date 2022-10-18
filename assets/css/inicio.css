@@ -38,6 +38,7 @@ section:nth-child(odd){
 /*Estilo sección frases*/
 .inicio_frases{
     display: block;
+    text-align: center;
 }
 .inicio_frases > h3{
     font-size: 1.5rem;
@@ -75,7 +76,12 @@ section:nth-child(odd){
     height: 350px;
     width: 100%;
 }
+.inicio_servicios > h2 {
+    flex: 100%;
+    text-align: center;
+    font-size: 2.5rem;
 
+}
 .inicio_servicios > div{
     flex: 30%;
     padding: 2%;
