@@ -1,4 +1,6 @@
-
+.icon-persona {
+  width: 50%;
+}
 .nosotros_flex-container {
   display: flex;
   flex-direction: column;
