@@ -15,6 +15,21 @@ section:nth-child(odd){
     background-color: var(--color5);
 }
 
+.menu-icon {
+    color: white;
+    float: left;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    float: left;
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    gap: 1em;
+}
+
 /*Estilos header del inicio*/
 
 #inicio_header{
