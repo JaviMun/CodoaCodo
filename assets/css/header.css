@@ -14,7 +14,20 @@ header > nav > div{
     flex: 60;
     display: flex;
 }
-header > nav > div > a{
+.menu-icon {
+    color: white;
+    float: left;
+    display: flex;
+    align-items: center;
+}
+.icon {
+    float: left;
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    gap: 1em;
+}
+header > nav > div > a, .icon > a{
     background-color: transparent;
     flex: 20%;
     text-decoration: none;
@@ -23,6 +36,9 @@ header > nav > div > a{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.icon > a > img{
+    margin-right: 10px;
 }
 header > nav > a{
     flex: 40%;
