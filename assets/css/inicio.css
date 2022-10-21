@@ -141,13 +141,18 @@ section > div > p{
     }
     #inicio_header > div{
         flex: 100%;
-        background-color: #038abb6b;
+        background-color: #038abbe8;
         padding: 5%;
     }
 
     #inicio_header > div:nth-child(2){
         display: none;
     }
+    
+    .inicio_portfolio > div{
+        flex: 100%;
+    }
+
     .inicio_servicios > div{
         flex: 100%;
         border: none;

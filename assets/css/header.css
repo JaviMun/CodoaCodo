@@ -81,6 +81,9 @@ header > nav > div > a:hover{
 /*Agremamos responsividad a la barra de navegación*/
 
 @media(max-width: 720px){
+    h1{
+        font-size: 1.2rem;
+    }
     #mobile{
         display: flex;
         flex-direction: row-reverse;

@@ -58,6 +58,11 @@
     transform: translateY(0.4rem);
     transition: .5s;
 }
+.servicios_cta > a{
+    background-color: transparent;
+    text-decoration: none;
+    color: black;
+}
 
 /*media queries para los textos de la página*/
 @media (max-width: 720px) {

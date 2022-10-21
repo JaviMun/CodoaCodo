@@ -6,7 +6,7 @@ const FORM = document.querySelector('form');
 
 function validarNombre() {
     let regExpNombre = new RegExp("[A-Za-z]\s");
-    if (regExpNombre.test(NOMBRE.value) && NOMBRE.value.length >= 5) {
+    if (regExpNombre.test(NOMBRE.value) && NOMBRE.value.length >= 3) {
         return true;
     } else {
         return false;
@@ -60,6 +60,7 @@ function enviarDatos(e){
                     servicio: SERVICIO.value,
                     consulta: CONSULTA.value
                 }
+                FORM.reset();
             }else{
                 console.log("la consulta no esta bien");
                 CONSULTA.focus();

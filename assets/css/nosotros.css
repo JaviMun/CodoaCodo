@@ -31,10 +31,12 @@
   font: 1.8rem var(--title);
   margin-bottom: 5%;
 }
-.nosotros_flex-container > div > div > i{
+.nosotros_flex-container > div > div > a{
   font-size: 48px;
+  text-decoration: none;
   width: 20%;
-  margin-bottom: 5%;
+  margin: 0 5% 5% 0;
+  color: black;
 }
 
 @media(max-width:720px){
