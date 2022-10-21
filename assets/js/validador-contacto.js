@@ -5,7 +5,7 @@ const CONSULTA = document.getElementById('consulta');
 const FORM = document.querySelector('form');
 
 function validarNombre() {
-    let regExpNombre = new RegExp("[A-Za-z]\s");
+    let regExpNombre = /^([A-ZÁÉÍÓÚ][a-zñáéíóú]+[\s]?)+$/;
     if (regExpNombre.test(NOMBRE.value) && NOMBRE.value.length >= 3) {
         return true;
     } else {

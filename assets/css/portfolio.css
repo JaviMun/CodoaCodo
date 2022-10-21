@@ -16,7 +16,7 @@
 	
 }
 
-.inicio_portfolio > h1{
+.inicio_portfolio > h3{
 	text-align: center;
 	font-size: 30px;
 	margin: 15px 0px 40px;
@@ -80,4 +80,10 @@
 	-webkit-transform: scale(1.15);
 	-ms-transform: scale(1.15);
 	transform: scale(1.15);
+}
+
+@media(max-width: 720px){
+	.portafolio-item{
+		width: 100%;
+	}
 }

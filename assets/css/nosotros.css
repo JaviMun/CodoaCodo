@@ -1,3 +1,15 @@
+#nosotros_header{
+  width: 100%;
+  padding: 5% 0;
+  background-color: var(--color3);
+  text-align: center;
+}
+#nosotros_header > h2{
+  font-size: 3rem;
+}
+#nosotros_header > p{
+  font-size: 2rem;
+}
 .icon-persona {
   width: 50%;
 }
