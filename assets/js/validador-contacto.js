@@ -75,13 +75,25 @@ function enviarDatos(e){
     if(validarNombre()){
         if(validarEmail()){
             if(validarConsulta()){
-                //creamos un objeto que englobe todos los datos para enviarlos
-                form = {
+               //creamos un objeto que englobe todos los datos para enviarlos
+               form = {
                     name: NOMBRE.value,
                     email: EMAIL.value,
                     servicio: SERVICIO.value,
                     consulta: CONSULTA.value
                 }
+                //creamos los parametros adicionales que llevará nuestra peticion
+                let parametros = {
+                    method: 'POST',
+                    headers: {
+                    'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(form)
+                }
+                //realizamos la conexión con la api de mail, mandando los datos y los parametros.
+                fetch('./mail-api/enviar.php', parametros)
+                    .then(response => response.json())
+                    .then(data => console.log(data));
                 //limpiamos el formulario
                 FORM.reset();
             }else{
