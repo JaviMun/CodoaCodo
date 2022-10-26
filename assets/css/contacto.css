@@ -43,6 +43,10 @@ input, select, textarea{
     padding: 15px;
     font: 1rem var(--text);
 }
+.input-error{
+    color: red;
+    font-size: 1rem;
+}
 /*Responsividad para moviles*/
 @media(max-width: 720px){
     form{

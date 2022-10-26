@@ -7,7 +7,7 @@ const FORM = document.querySelector('form');
 //Creamos una función para validar el nombre a través de una expresión regular
 function validarNombre() {
     //creamos la expresión regular para validar el nombre
-    let regExpNombre = /^([A-ZÁÉÍÓÚ][a-zñáéíóú]+[\s]?)+$/;
+    let regExpNombre = /^([A-ZÁÉÍÓÚ a-zñáéíóú]+[\s]?)+$/;
     //validamos si el valor del input coincide con el formato y si consta de mas de tres caracteres
     if (regExpNombre.test(NOMBRE.value) && NOMBRE.value.length >= 3) {
         return true;
@@ -44,6 +44,12 @@ En caso de que falle la solicitud se creo de respaldo una expresion regular para
 function validarEmail(){
     //creamos la expresión regular de respaldo
     let regExpEmail = new RegExp("[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$");
+    /*
+        La api en caso de consumir las peticiones gratis nos devuelve un objeto con la propiedad message,
+        por lo que preguntamos si el objeto respuesta donde almacenamos los datos que devuelve posee la 
+        propiedad message. En caso de que sea verdadero, utilizamos el respaldo que es la expresión regular
+        que creamos
+    */
     if(respuesta.hasOwnProperty('message')){
         if(regExpEmail.test(EMAIL.value)){
             return true
@@ -58,7 +64,7 @@ function validarEmail(){
         }
     }
 }
-//creamos una función para validar que el input consulta tenga mas de 20 caracteres
+//creamos una función para validar que el input consulta tenga más de 20 caracteres
 function validarConsulta(){
     if(CONSULTA.value.length >= 20){
         return true;
@@ -68,12 +74,13 @@ function validarConsulta(){
 }
 //creamos la función que va a manejar el evento envio del formulario
 function enviarDatos(e){
+    //prevenimos el evento por default para manejar todo nosotros
     e.preventDefault();
-    let form = {
-        message: "algo salio mal!"
-    }
+    //primero consultamos la validez del input nombre
     if(validarNombre()){
+        //luego preguntamos la validez del campo email
         if(validarEmail()){
+            //por último validamos la consulta
             if(validarConsulta()){
                //creamos un objeto que englobe todos los datos para enviarlos
                form = {
@@ -97,12 +104,18 @@ function enviarDatos(e){
                 //limpiamos el formulario
                 FORM.reset();
             }else{
+                //Alertamos el error en un span en caso de que la consulta no tenga el formato necesario y volvemos a poner el foco en el input
+                CONSULTA.nextElementSibling.innerHTML = `<i class="fa-solid fa-circle-exclamation"></i> La consulta debe tener al menos 20 caracteres`;
                 CONSULTA.focus();
             }
         }else{
+            //Alertamos el error en un span en caso de que el email no tenga el formato necesario y volvemos a poner el foco en el input
+            EMAIL.nextElementSibling.innerHTML = `<i class="fa-solid fa-circle-exclamation"></i> El email debe existir y tener un formato válido`;
             EMAIL.focus();
         }
     }else{
+        //Alertamos el error en un span en caso de que el nombre no tenga el formato necesario y volvemos a poner el foco en el input
+        NOMBRE.nextElementSibling.innerHTML = `<i class="fa-solid fa-circle-exclamation"></i> El nombre debe contener solo caracteres alfabéticos y al menos tres letras`;
         NOMBRE.focus();
     }
 }

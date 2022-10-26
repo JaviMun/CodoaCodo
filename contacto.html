@@ -9,7 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&family=Slabo+27px&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/4b36ac4034.js" crossorigin="anonymous"></script>
-    <title>Contacto</title>
+    <title>Contacto - Construyendo Webs</title>
+    <link rel="icon" type="image/x-icon" href="/assets/img/construyendo-webs-favicon.ico">
 </head>
 <body>
     <header>
@@ -18,7 +19,7 @@
                 <div class="icon">
                     <a href="index.html">
                         <img src="./assets/img/icons8-code-50.png" alt="icon">
-                        <h1> Tu Pagina Web </h1>
+                        <h1> Construyendo Webs</h1>
                     </a>
                 </div>
             </div>
@@ -62,10 +63,12 @@
             <div>
                 <label for="name">Nombre</label>
                 <input type="text" id="name" name="name" required>
+                <span class="input-error"></span>
             </div>
             <div>
                 <label for="email">Email</label>
                 <input type="text" id="email" name="email" required>
+                <span class="input-error"></span>
             </div>
             <div>
                 <label for="servicio">Servicio</label>
@@ -81,6 +84,7 @@
             <div>
                 <label for="consulta">Consulta</label>
                 <textarea id="consulta" name="consulta" rows="4" cols="50" placeholder="Su consulta no molesta :)" required></textarea>
+                <span class="input-error"></span>
             </div>
             <input type="submit" value="Enviar">
         </form>
