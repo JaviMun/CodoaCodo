@@ -78,10 +78,16 @@ function enviarDatos(e){
     e.preventDefault();
     //primero consultamos la validez del input nombre
     if(validarNombre()){
+        //En caso de que estemos mostrando un error anterior vaciamos el span
+        NOMBRE.nextElementSibling.innerHTML = "";
         //luego preguntamos la validez del campo email
         if(validarEmail()){
+            //En caso de que estemos mostrando un error anterior vaciamos el span
+            EMAIL.nextElementSibling.innerHTML = "";
             //por último validamos la consulta
             if(validarConsulta()){
+                //En caso de que estemos mostrando un error anterior vaciamos el span
+               CONSULTA.nextElementSibling.innerHTML = "";
                //creamos un objeto que englobe todos los datos para enviarlos
                form = {
                     name: NOMBRE.value,
@@ -103,6 +109,7 @@ function enviarDatos(e){
                     .then(data => console.log(data));
                 //limpiamos el formulario
                 FORM.reset();
+                FORM.lastElementChild.innerHTML = `<i class="fa-solid fa-circle-check"></i> El formulario se ha enviado con éxito`;
             }else{
                 //Alertamos el error en un span en caso de que la consulta no tenga el formato necesario y volvemos a poner el foco en el input
                 CONSULTA.nextElementSibling.innerHTML = `<i class="fa-solid fa-circle-exclamation"></i> La consulta debe tener al menos 20 caracteres`;

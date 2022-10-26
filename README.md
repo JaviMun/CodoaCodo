@@ -1,7 +1,5 @@
 # Construyendo webs - proyecto front-end Codo a Codo
 
----
-
 ## Integrantes:
 
 - Rita Echeverria

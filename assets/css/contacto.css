@@ -47,6 +47,10 @@ input, select, textarea{
     color: red;
     font-size: 1rem;
 }
+.formulario-enviado{
+    color: green;
+    font-size: 1.5rem;
+}
 /*Responsividad para moviles*/
 @media(max-width: 720px){
     form{
