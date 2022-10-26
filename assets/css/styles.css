@@ -1,10 +1,10 @@
-@import './header.css';
-@import './inicio.css';
-@import './nosotros.css';
-@import './portfolio.css';
-@import './servicios.css';
-@import './contacto.css';
-@import './footer.css';
+@import './modules/header.module.css';
+@import './modules/inicio.module.css';
+@import './modules/nosotros.module.css';
+@import './modules/portfolio.module.css';
+@import './modules/servicios.module.css';
+@import './modules/contacto.module.css';
+@import './modules/footer.module.css';
 
 /*estilos generales y variables*/
 :root{

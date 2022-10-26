@@ -21,7 +21,7 @@ let codigoRespuesta;
 function validarEmailAPI(){
     //creamos los headers que llevara la llamada a la api
     let myHeaders = new Headers();
-    myHeaders.append("apikey", "QwImUtMQjTDsYbAnznSCcphpuasVY0YT");
+    myHeaders.append("apikey", "JmHeLX8WrHVC3YrrOcEk45QK0taKSR2m");
     //creamos las opciones que llevará el llamado a la api
     let requestOptions = {
         method: 'GET',
@@ -109,7 +109,12 @@ function enviarDatos(e){
                     .then(data => console.log(data));
                 //limpiamos el formulario
                 FORM.reset();
+                //avisamos al final del formulario que la consulta fue enviada con éxito
                 FORM.lastElementChild.innerHTML = `<i class="fa-solid fa-circle-check"></i> El formulario se ha enviado con éxito`;
+                //Dejamos el mensaje uno segundos y volvemos a cero el contenido del elemento
+                setTimeout(function(){
+                    FORM.lastElementChild.innerHTML = ""
+                }, 2000);
             }else{
                 //Alertamos el error en un span en caso de que la consulta no tenga el formato necesario y volvemos a poner el foco en el input
                 CONSULTA.nextElementSibling.innerHTML = `<i class="fa-solid fa-circle-exclamation"></i> La consulta debe tener al menos 20 caracteres`;
